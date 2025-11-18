@@ -1,5 +1,5 @@
 * {
-    font-family: 'Noteworthy', 'Amatic SC', 'Zen Kurenaido', cursive;
+    font-family: 'Noteworthy', 'huimin', cursive;
     color: #ccc;
 }
 body {
@@ -16,6 +16,9 @@ header {
     width: 100vw; /* ビューポート幅に合わせる */
     height: 100vh; /* ビューポート高さに合わせる */
     /* background-image: url("../image/1741677822373.jpg"); */
+}
+main {
+    padding: 20px;
 }
 /* モバイル対応 */
 @media (max-width: 768px) {
@@ -44,6 +47,7 @@ h2 {
 p {
     margin: 10px; /* マージンをリセット */
     padding: 10px; /* パディングをリセット */
+    line-height: 0; /* 行間を0にする */
 }
 hr {
     border: none;
@@ -88,22 +92,22 @@ table tbody tr:last-child td {
     border-bottom: none; /* 最終行の下には線を表示しない */
 }
 
-#light-green {
+.light-green {
     color: #04633e;
 }
-#blossom {
+.blossom {
     color: #a14d47;
 }
-#yellow {
+.yellow {
     color: #b4902c;
 }
-#gray-pink {
+.gray-pink {
     color: #c9acad;
 }
-#gray-green {
+.gray-green {
     color: #abc9aa;
 }
-#gray-blue {
+.gray-blue {
     color: #a7baca;
 }
 
