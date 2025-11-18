@@ -45,6 +45,9 @@ p {
     margin: 10px; /* マージンをリセット */
     padding: 10px; /* パディングをリセット */
 }
+hr {
+    border: none;
+}
 table {
     margin: 10px; /* マージンをリセット */
     padding: 10px; /* パディングをリセット */
@@ -53,11 +56,11 @@ a {
     color: #ccc;
 }
 
-ul {
+ul.mokuji {
     display: flex;
     justify-content: space-around;
 }
-li {
+li.mokuji {
     list-style:none;
 }
 
