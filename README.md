@@ -8,4 +8,5 @@
  1. リポジトリのホームに移動
  2. settingタブをクリック
  3. 下の方までスクロールして`Danger Zone`を見つける
- 4. `Change repository visibility`で切り替え
+ 4. `Change repository visibility`で`public`に切り替え
+ 5. 公開されたサイト`https://yumi-ganmo.github.io/events/[パス]/main.html`にアクセス
