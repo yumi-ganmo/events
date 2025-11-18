@@ -60,6 +60,11 @@ ul.mokuji {
     display: flex;
     justify-content: space-around;
 }
+@media (max-width: 768px) { /* 画面幅が768px以下の場合 */
+    ul.mokuji {
+      display: block; /* display: flex を解除して要素を縦並びにする */
+    }
+}
 li.mokuji {
     list-style:none;
 }
@@ -100,4 +105,13 @@ table tbody tr:last-child td {
 }
 #gray-blue {
     color: #a7baca;
+}
+
+/* outline */
+.accordion-item {
+    background-color: #120900;
+    
+}
+.accordion-button {
+    background-color: #6b9bb3;
 }

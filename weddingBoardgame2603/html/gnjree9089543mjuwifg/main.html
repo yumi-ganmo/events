@@ -13,7 +13,7 @@
         <!-- <link rel="next" href="【1つ後ろのページのURL】" /> -->
 
         <!-- 外部ファイルの読み込み -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <!-- cssをdropboxから取得する場合 -->
         <!-- <link rel="stylesheet" href="https://dl.dropboxusercontent.com/scl/fi/rfnct7a12gfwqribjlpw0/main.css?rlkey=m85bbyp4jhd1eqogg82dp0rcs&st=v3447ez1"> -->
         <link rel="stylesheet" href="../../css/main.css">
@@ -35,13 +35,26 @@
             <p>2026/3/21 Sat.</p>
         </header>
         <nav>
-            <ul class="mokuji">
-                <li class="mokuji"><h1><a href="#gaiyou">概要</a></h1></li>
-                <li class="mokuji"><h1><a href="#shousai">詳細</a></h1></li>
-                <li class="mokuji"><h1><a href="#schedule">当日のスケジュール</a></h1></li>
-                <li class="mokuji"><h1><a href="#onegai">皆さんへのお願い</a></h1></li>
-                <li class="mokuji"><h1><a href="#toiawase">お問い合わせ</a></h1></li>
-            </ul>
+            <div class="accordion accordion-flush" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      outline
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="mokuji">
+                            <li class="mokuji"><p><a href="#gaiyou">概要</a></p></li>
+                            <li class="mokuji"><p><a href="#shousai">詳細</a></p></li>
+                            <li class="mokuji"><p><a href="#schedule">当日のスケジュール</a></p></li>
+                            <li class="mokuji"><p><a href="#onegai">皆さんへのお願い</a></p></li>
+                            <li class="mokuji"><p><a href="#toiawase">お問い合わせ</a></p></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </nav>
 
         <main>
@@ -77,7 +90,7 @@
                     </tr>
                     <tr>
                         <td>時間</td>
-                        <td>昼ぐらいから（確定次第連絡））</td>
+                        <td>昼ぐらいから（確定次第連絡）</td>
                     </tr>
                     <tr>
                         <td>場所</td>
@@ -85,9 +98,7 @@
                     </tr>
                     <tr>
                         <td>参加費</td>
-                        <td>5,000〜7,000円程度
-                            <hr>（20名以上の参加を見込んでいるので、7,000円を超えることはありません）
-                        </td>
+                        <td>5,000〜7,000円程度（20名以上の参加を見込んでいるので、7,000円を超えることはありません）</td>
                     </tr>
                 </table>
             <section>
@@ -123,6 +134,7 @@
         </main>
 
         <footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
             <p>&copy; 20260329</p>
         </footer>
     </body>
