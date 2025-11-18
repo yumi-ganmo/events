@@ -47,7 +47,7 @@ h2 {
 p {
     margin: 10px; /* マージンをリセット */
     padding: 10px; /* パディングをリセット */
-    line-height: 0; /* 行間を0にする */
+    line-height: normal; /* 行間を0にする */
 }
 hr {
     border: none;
