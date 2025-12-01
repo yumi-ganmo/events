@@ -1,6 +1,6 @@
 function showRestTime() {
     const now = new Date();
-    const goal = new Date(2025, 3, 14);
+    const goal = new Date(2026, 3, 21);
   
     const restMillisecond = goal.getTime() - now.getTime();
     const day = Math.floor(restMillisecond / 1000 / 60 / 60 / 24);

@@ -1,38 +1,54 @@
-* {
-    font-family: 'Noteworthy', 'huimin', cursive;
-    color: #ccc;
+@font-face {
+  font-family: 'Johto Mono';
+  src: url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff2') format('woff2'),
+       url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 body {
-    background-color: #120900;
+    font-family: 'Johto Mono', monospace;
+    background-image: url(../image/suna.jpg);
+    background-size: 50px 50px; /* 画像の 横x高さ を指定 */
+    background-repeat: repeat; /* 画像を全方向に繰り返し(デフォルト) */
 }
-/* 背景を付けたい場合 */
 header {
     /* 画像をgoogledriveから取得する場合 */
     /* background-image: linear-gradient( rgb(20,10,0, 1), rgba(0,0,33, 0), rgb(20,10,0, 1)), url("https://lh3.googleusercontent.com/d/11RdU7Jlp52HFMuwHfOXp5KufZJPeP1S8"); */
-    background-image: linear-gradient( rgb(20,10,0, 1), rgba(0,0,33, 0), rgb(20,10,0, 1)), url(../image/1741677822373.jpg);
-    background-size: cover; /* 画像を画面サイズに合わせる */
-    background-position: center; /* 画像を中央に配置 */
-    background-repeat: no-repeat; /* 画像を繰り返さない */
-    width: 100vw; /* ビューポート幅に合わせる */
-    height: 100vh; /* ビューポート高さに合わせる */
-    /* background-image: url("../image/1741677822373.jpg"); */
+    /* 画像をディレクトリから取得する場合 */
+    background-image: url(../image/kusa.jpg);
+    background-size: 50px 50px; /* 画像の 横x高さ を指定 */
+    background-repeat: repeat; /* 画像を全方向に繰り返し(デフォルト) */
+    padding: 5px;
+    margin: 0;
+    align-items: center; /* 高さ方向の中央揃え */
+}
+div.sub-title {
+    display: grid; /* 子要素を2:1の横並びに配置 */
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+}
+img.pokeSen {
+    width: 120px;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
 main {
     padding: 20px;
 }
 /* モバイル対応 */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     header {
-        background-size: cover; /* 画像が画面内に収まるように調整 */
-        background-position: center top; /* 画像が見切れないように調整 */
-        height: auto; /* 高さをコンテンツに合わせて動的に調整 */
+        background-size: cover; /* 画像が画面内に収まるように調整 
+        background-position: center top; /* 画像が見切れないように調整 
+        height: auto; /* 高さをコンテンツに合わせて動的に調整 
     }
-}
+} */
 @media (max-width: 480px) {
-    header {
-        background-size: cover; /* 画像が画面内に収まるように調整 */
-        background-position: center top; /* 画像が見切れないように調整 */
-        height: auto; /* 高さをコンテンツに合わせて動的に調整 */
+    .title {
+        flex-direction: column;   /* 縦並びに切り替え */
     }
 }
 
@@ -69,7 +85,7 @@ ul.mokuji {
       display: block; /* display: flex を解除して要素を縦並びにする */
     }
 }
-li.mokuji {
+li.mokuji-li {
     list-style:none;
 }
 
@@ -111,11 +127,49 @@ table tbody tr:last-child td {
     color: #a7baca;
 }
 
+.inline {
+  display: inline-block;
+  margin: 0;
+}
+
 /* outline */
 .accordion-item {
-    background-color: #120900;
-    
+    background-color: transparent;
 }
 .accordion-button {
-    background-color: #6b9bb3;
+    background-color: #75b8da;
+    border:double; /* 二重線の枠線をひく*/
+}
+/* デフォルト（閉じているとき）は透明にしたいなら明示的に */
+.accordion .accordion-body {
+  background-color: transparent;
+}
+/* 開いている（.show が付いた）ときだけ背景色をつける */
+.accordion .accordion-collapse.show .accordion-body .mokuji {
+    background-color: rgba(255, 247, 240, 0.5);
+    border:double;
+}
+/* エフェクト全消し */
+/* アコーディオンのクリックで色や影が付かないようにする */
+.accordion-button {
+  background-color: #75b8da; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border:double;
+}
+/* フォーカス／アクティブ時も見た目を変えない */
+.accordion-button:focus,
+.accordion-button:active,
+.accordion-button:not(.collapsed) {
+  background-color:#75b8da;
+  box-shadow: none !important;
+  outline: none !important;    /* ブラウザのフォーカス輪郭を消す（必要なら） */
+  border:double;
+}
+/* ホバー時も色を変えたくない場合 */
+.accordion-button:hover {
+  background-color: #75b8da;
+  box-shadow: none !important;
+  border:double;
 }
