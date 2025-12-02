@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'Johto Mono';
+  src: url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff2') format('woff2'),
+       url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+header {
+    padding: 20px;
+}
+body {
+    font-family: 'Johto Mono', monospace;
+    background-color: #f7f7f7;
+}
+main {
+    padding: 20px;
+}
+
+h1 {
+    margin: 10px; /* マージンをリセット */
+    padding: 10px; /* パディングをリセット */
+}
+h2 {
+    margin: 10px; /* マージンをリセット */
+    padding: 10px; /* パディングをリセット */
+}
+p {
+    margin: 10px; /* マージンをリセット */
+    padding: 10px; /* パディングをリセット */
+    line-height: normal; /* 行間を0にする */
+}
+hr {
+    border: none;
+}
+table {
+    margin: 10px; /* マージンをリセット */
+    padding: 10px; /* パディングをリセット */
+}
+
+li.mokuji-li {
+    list-style:none;
+}
+
+.battle-header {
+    position: relative;
+    width: auto;  /* 必要に応じて変更 */
+    height: 150px;
+    margin: 10px auto;
+    padding: 10px auto;
+}
+img.icon {
+    width: 120px;
+    height: auto;
+    position: absolute;
+}
+img.icon.top-left {
+    top: 0;
+    left: 100px;
+}
+img.icon.top-right {
+    top: 0;
+    right: 100px;
+    width: 80px;
+    height: 60px;
+}
+img.icon.bottom-left {
+    bottom: 0;
+    left: 100px;
+}
+img.icon.bottom-right {
+    bottom: 0;
+    right: 100px;
+}
+
+/* ポケモン */
+img.mimikkyu {
+    width: 50px;
+    height: auto;
+}
+img.genga {
+    width: 50px;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th,
+table td {
+    border: none; /* すべての境界線を削除 */
+    padding: 8px; /* セル内の余白を指定 */
+    border-bottom: 2px solid #ccc; /* 横線を追加 */
+}
+
+.light-green {
+    color: #04633e;
+}
+.blossom {
+    color: #a14d47;
+}
+.yellow {
+    color: #b4902c;
+}
+.gray-pink {
+    color: #c9acad;
+}
+.gray-green {
+    color: #abc9aa;
+}
+.gray-blue {
+    color: #a7baca;
+}
+
+.button {
+    background-color: rgba(255, 250, 246, 0.7);
+}
+.double_line {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: double 5px #252525;
+    border-radius: 5px;
+}
+.inline {
+  display: inline-block;
+  margin: 0;
+}
+.block {
+  display: block;
+  margin: 0;
+}

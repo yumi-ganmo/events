@@ -24,20 +24,19 @@ header {
     margin: 0;
     align-items: center; /* 高さ方向の中央揃え */
 }
+main {
+    padding: 20px;
+}
+
+section.gaiyou {
+    background-color: #f7f7f7;
+}
 div.sub-title {
     display: grid; /* 子要素を2:1の横並びに配置 */
     grid-template-columns: 2fr 1fr;
     text-align: center;
 }
-img.pokeSen {
-    width: 120px;
-    height: auto;
-    padding: 0;
-    margin: 0;
-}
-main {
-    padding: 20px;
-}
+
 /* モバイル対応 */
 /* @media (max-width: 768px) {
     header {
@@ -72,10 +71,23 @@ table {
     margin: 10px; /* マージンをリセット */
     padding: 10px; /* パディングをリセット */
 }
-a {
-    color: #ccc;
-}
 
+img.pokeSen {
+    width: 120px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+img.ookido {
+    width: 120px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+}
+a.gree-kosiki {
+    text-decoration: underline;
+    text-decoration-color: #04633e !important;
+}
 ul.mokuji {
     display: flex;
     justify-content: space-around;
@@ -127,8 +139,22 @@ table tbody tr:last-child td {
     color: #a7baca;
 }
 
+.button {
+    background-color: rgba(255, 250, 246, 0.7);
+}
+.double_line {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: double 5px #252525;
+    border-radius: 5px;
+}
 .inline {
   display: inline-block;
+  margin: 0;
+}
+.block {
+  display: block;
   margin: 0;
 }
 
@@ -136,40 +162,74 @@ table tbody tr:last-child td {
 .accordion-item {
     background-color: transparent;
 }
-.accordion-button {
-    background-color: #75b8da;
-    border:double; /* 二重線の枠線をひく*/
-}
-/* デフォルト（閉じているとき）は透明にしたいなら明示的に */
-.accordion .accordion-body {
-  background-color: transparent;
+.accordion-header {
+    padding: 20px 0 0 0;
+    margin: 0px;
 }
 /* 開いている（.show が付いた）ときだけ背景色をつける */
-.accordion .accordion-collapse.show .accordion-body .mokuji {
+.accordion .accordion-collapse.show {
     background-color: rgba(255, 247, 240, 0.5);
-    border:double;
+    padding: 0px;
+    margin: 0px;
 }
-/* エフェクト全消し */
-/* アコーディオンのクリックで色や影が付かないようにする */
-.accordion-button {
+
+/* エフェクト全上書き(詳細) */
+.shousai .accordion-button, 
+.shousai .accordion-button:focus,
+.shousai .accordion-button:active,
+.shousai .accordion-button:hover,
+.shousai .accordion-button:not(.collapsed) {
   background-color: #75b8da; /* 背景色を透明に */
   color: inherit !important;                /* 文字色は継承 */
   box-shadow: none !important;              /* 影を消す */
   transition: none !important;              /* 色のフェード等の切り替えを無効化 */
-  border:double;
+  border: double 5px #252525;
 }
-/* フォーカス／アクティブ時も見た目を変えない */
-.accordion-button:focus,
-.accordion-button:active,
-.accordion-button:not(.collapsed) {
-  background-color:#75b8da;
-  box-shadow: none !important;
-  outline: none !important;    /* ブラウザのフォーカス輪郭を消す（必要なら） */
-  border:double;
+/* エフェクト全上書き(当日のスケジュール) */
+.schedule .accordion-button, 
+.schedule .accordion-button:focus,
+.schedule .accordion-button:active,
+.schedule .accordion-button:hover,
+.schedule .accordion-button:not(.collapsed) {
+  background-color: #75da7a; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
 }
-/* ホバー時も色を変えたくない場合 */
-.accordion-button:hover {
-  background-color: #75b8da;
-  box-shadow: none !important;
-  border:double;
+/* エフェクト全上書き(図鑑) */
+.zukan .accordion-button, 
+.zukan .accordion-button:focus,
+.zukan .accordion-button:active,
+.zukan .accordion-button:hover,
+.zukan .accordion-button:not(.collapsed) {
+  background-color: #da7575; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+/* エフェクト全上書き(出欠席回答) */
+.shukketu .accordion-button, 
+.shukketu .accordion-button:focus,
+/* .shukketu .accordion-button:active, */
+/* .shukketu .accordion-button:hover, */
+.shukketu .accordion-button:not(.collapsed) {
+  background-color: #dacb75; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+/* エフェクト全上書き(皆さんへのお願い) */
+.onegai .accordion-button, 
+.onegai .accordion-button:focus,
+.onegai .accordion-button:active,
+.onegai .accordion-button:hover,
+.onegai .accordion-button:not(.collapsed) {
+  background-color: #a693ca; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
 }
