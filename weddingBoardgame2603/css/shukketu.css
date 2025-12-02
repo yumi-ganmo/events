@@ -57,21 +57,21 @@ img.icon {
 }
 img.icon.top-left {
     top: 0;
-    left: 100px;
+    left: 50px;
 }
 img.icon.top-right {
     top: 0;
-    right: 100px;
+    right: 50px;
     width: 80px;
     height: 60px;
 }
 img.icon.bottom-left {
     bottom: 0;
-    left: 100px;
+    left: 50px;
 }
 img.icon.bottom-right {
     bottom: 0;
-    right: 100px;
+    right: 50px;
 }
 
 /* ポケモン */
@@ -82,6 +82,10 @@ img.mimikkyu {
 img.genga {
     width: 50px;
     height: auto;
+}
+a.gree-kosiki {
+    text-decoration: underline;
+    text-decoration-color: #04633e !important;
 }
 
 table {
@@ -115,14 +119,23 @@ table td {
 }
 
 .button {
-    background-color: rgba(255, 250, 246, 0.7);
+    background-color: #abc9aa;
 }
 .double_line {
     display: inline-block;
+    width: 350px;
     padding: 5px;
     margin: 5px;
     border: double 5px #252525;
     border-radius: 5px;
+    position: relative; /* ▼ を基準に配置するため必要 */
+}
+/* ▼ */
+.double_line .arrow {
+    position: absolute;
+    bottom: 5px;   /* 枠の下からの距離 */
+    right: 5px;    /* 枠の右からの距離 */
+    font-size: 16px;
 }
 .inline {
   display: inline-block;
