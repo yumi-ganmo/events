@@ -121,6 +121,10 @@ table td {
 .button {
     background-color: #abc9aa;
 }
+.button:active {
+    background-color: #95af95;
+    box-shadow: none;
+}
 .double_line {
     display: inline-block;
     width: 90%;
@@ -130,6 +134,7 @@ table td {
     border: double 5px #252525;
     border-radius: 5px;
     position: relative; /* ▼ を基準に配置するため必要 */
+    box-shadow: 2px  2px 4px gray; /* 影をつける */
 }
 /* ▼ */
 .double_line .arrow {
