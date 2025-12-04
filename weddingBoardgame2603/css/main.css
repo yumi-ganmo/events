@@ -28,9 +28,6 @@ main {
     padding: 20px;
 }
 
-section.gaiyou {
-    background-color: #f7f7f7;
-}
 div.sub-title {
     display: grid; /* 子要素を2:1の横並びに配置 */
     grid-template-columns: 2fr 1fr;
@@ -78,11 +75,16 @@ img.pokeSen {
     padding: 0;
     margin: 0;
 }
-img.ookido {
+img.ookido,
+img.zukan {
     width: 120px;
     height: auto;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
+}
+img.icon {
+    width: 60px;
+    height: auto;
 }
 a.gree-kosiki {
     text-decoration: underline;
@@ -120,6 +122,9 @@ table tbody tr:last-child td {
     border-bottom: none; /* 最終行の下には線を表示しない */
 }
 
+.back-white {
+    background-color: #f7f7f7;
+}
 .light-green {
     color: #04633e;
 }
@@ -141,6 +146,11 @@ table tbody tr:last-child td {
 
 .button {
     background-color: rgba(255, 250, 246, 0.7);
+    box-shadow: 2px  2px 4px gray; /* 影をつける */
+}
+.button:active {
+    background-color: rgba(255, 250, 246, 0.5);
+    box-shadow: none;
 }
 .double_line {
     display: inline-block;
@@ -148,6 +158,11 @@ table tbody tr:last-child td {
     margin: 5px;
     border: double 5px #252525;
     border-radius: 5px;
+}
+.line_icon {
+    display: inline-block;
+    border: 5px #252525;
+    border-radius: 45px;
 }
 .inline {
   display: inline-block;
