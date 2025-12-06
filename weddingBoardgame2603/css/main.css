@@ -256,7 +256,7 @@ table tbody tr:last-child {
 /* 図鑑のメーターを作成 */
 .meter {
   display: flex;
-  gap: 4px;
+  gap: 3px;
 }
 /* ドットの見た目 */
 .dot {
