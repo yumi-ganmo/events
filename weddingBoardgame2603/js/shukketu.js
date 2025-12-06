@@ -5,9 +5,11 @@ window.addEventListener("DOMContentLoaded", function() {
     let nameValue = "";
     let shukketuValue = "";
     let yoteiValue = "";
+    let boardgameValue = "";
     let yuushiValue = "";
     const message = document.getElementById('message'); // ポケモンがしゃべるメッセージ要素
     document.getElementById('yotei-ele').style.display = "none"; // 予定を非表示
+    document.getElementById('boardgame-ele').style.display = "none"; // ボドゲ希望を非表示
     document.getElementById('yuushi-ele').style.display = "none"; // 有志を非表示
     document.getElementById('err-name').style.display = "none"; // エラーメッセージを非表示
     document.getElementById('err-shukketu').style.display = "none"; // エラーメッセージを非表示
@@ -30,14 +32,17 @@ window.addEventListener("DOMContentLoaded", function() {
             // ラジオボタンの選択状態で要素を動的に制御
             if (shukketuValue === "yes") { // 出席の場合
                 document.getElementById('yotei-ele').style.display = "none"; // 予定を非表示
+                document.getElementById('boardgame-ele').style.display = "block"; // ボドゲ希望を表示
                 document.getElementById('yuushi-ele').style.display = "block"; // 有志を表示
                 message.textContent = 'ボドゲ！　ボドゲ！'; // ポケモンがしゃべるメッセージ要素
             } else if (shukketuValue === "horyu") { // 保留の場合
                 document.getElementById('yotei-ele').style.display = "block"; // 予定を表示
+                document.getElementById('boardgame-ele').style.display = "block"; // ボドゲ希望を表示
                 document.getElementById('yuushi-ele').style.display = "block"; // 有志を表示
                 message.textContent = 'アラタメテ コベツデ カクニンスルゾー'; // ポケモンがしゃべるメッセージ要素
             } else { // "no"または未選択の場合
                 document.getElementById('yotei-ele').style.display = "none"; // 予定を非表示
+                document.getElementById('boardgame-ele').style.display = "none"; // ボドゲ希望を表示
                 document.getElementById('yuushi-ele').style.display = "none"; // 有志を非表示
             }
         });
@@ -47,6 +52,17 @@ window.addEventListener("DOMContentLoaded", function() {
     document.getElementById("yotei").addEventListener("input", function() {
         yoteiValue = this.value;
         console.log("予定：", yoteiValue);
+    });
+
+    // ボドゲ希望の入力ボックスに値が入ったら実行
+    document.getElementById("boardgame").addEventListener("input", function() {
+        boardgameValue = this.value;
+        console.log("ボドゲ希望：", boardgameValue);
+
+        // ポケモンがしゃべるメッセージ要素
+        if (shukketuValue !== "horyu") { // 保留のメッセージを優先
+            message.textContent = boardgameValue + '!?';
+        }
     });
 
     // 有志のラジオボタンが選択されたら実行
@@ -94,6 +110,7 @@ window.addEventListener("DOMContentLoaded", function() {
         
         // スプレッドシートに送信する情報（送信データ用に加工）
         const shukketuSendValue = shukketuValue === "yes" ? "〇" : shukketuValue === "no" ? "×" : "保留";
+        const boardgameSendValue = !boardgameValue ? "なし" : boardgameValue;
         const yuushiSendValue = yuushiValue === "yes" ? "〇" : yuushiValue === "no" ? "×" : "";
         const data = {
             password: "16greeEventPassword", // GAS 側と同じ簡易パスワード
@@ -101,6 +118,7 @@ window.addEventListener("DOMContentLoaded", function() {
             name: nameValue,
             shukketu: shukketuSendValue,
             yotei: yoteiValue,
+            boardgame: boardgameSendValue,
             yuushi: yuushiSendValue
         };
 

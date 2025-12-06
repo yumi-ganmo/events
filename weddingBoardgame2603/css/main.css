@@ -57,16 +57,21 @@ h2 {
     padding: 10px; /* パディングをリセット */
 }
 p {
-    margin: 10px; /* マージンをリセット */
-    padding: 10px; /* パディングをリセット */
+    margin: 5px 10px; /* マージンをリセット */
+    padding: 5px 10px; /* パディングをリセット */
+    line-height: normal; /* 行間を0にする */
+}
+.p-zukan {
+    margin: 5px 0px; /* マージンをリセット */
+    padding: 5px 0px; /* パディングをリセット */
     line-height: normal; /* 行間を0にする */
 }
 hr {
     border: none;
 }
 table {
-    margin: 10px; /* マージンをリセット */
-    padding: 10px; /* パディングをリセット */
+    width: 100%;
+    padding: 5px; /* パディングをリセット */
 }
 
 img.pokeSen {
@@ -107,19 +112,18 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
-table th,
 table td {
     border: none; /* すべての境界線を削除 */
     padding: 8px; /* セル内の余白を指定 */
 }
-table th {
-    border-bottom: 2px solid #ccc; /* ヘッダーの下に横線を追加 */
+table td.shosai-t {
+    border-bottom: 1px solid #ccc; /* ヘッダーの下に横線を追加 */
 }
-table td {
-    border-bottom: 1px solid #ccc; /* データ行の下に横線を追加 */
-}
-table tbody tr:last-child td {
+table tbody tr:last-child td.shosai-t {
     border-bottom: none; /* 最終行の下には線を表示しない */
+}
+table tbody tr:last-child {
+    border-bottom: 1px solid #ccc; /* 最終行の下には線を表示 */
 }
 
 .back-white {
@@ -247,4 +251,20 @@ table tbody tr:last-child td {
   box-shadow: none !important;              /* 影を消す */
   transition: none !important;              /* 色のフェード等の切り替えを無効化 */
   border: double 5px #252525;
+}
+
+/* 図鑑のメーターを作成 */
+.meter {
+  display: flex;
+  gap: 5px;
+}
+/* ドットの見た目 */
+.dot {
+  width: 10px;
+  height: 24.5px;
+  border-radius: 999px;
+  background: #ddd;
+}
+.filled {
+  background: #ffc60b;
 }
