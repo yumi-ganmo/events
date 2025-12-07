@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('yotei-ele').style.display = "block"; // 予定を表示
                 document.getElementById('boardgame-ele').style.display = "block"; // ボドゲ希望を表示
                 document.getElementById('yuushi-ele').style.display = "block"; // 有志を表示
-                message.textContent = 'アラタメテ コベツデ カクニンスルゾー'; // ポケモンがしゃべるメッセージ要素
+                message.textContent = 'ヨテイハ アラタメテ カクニンスルゾー'; // ポケモンがしゃべるメッセージ要素
             } else { // "no"または未選択の場合
                 document.getElementById('yotei-ele').style.display = "none"; // 予定を非表示
                 document.getElementById('boardgame-ele').style.display = "none"; // ボドゲ希望を表示

@@ -191,6 +191,14 @@ table tbody tr:last-child {
     padding: 0px;
     margin: 0px;
 }
+/* 注意書き初期状態：非表示 */
+#zukanNote {
+    display: none;
+}
+/* collapse が開いている時だけ表示 */
+#collapseZukan.show ~ #zukanNote {
+    display: block;
+}
 
 /* エフェクト全上書き(詳細) */
 .shousai .accordion-button, 

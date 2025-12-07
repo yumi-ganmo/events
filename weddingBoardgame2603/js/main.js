@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const muraSugata2 = "<p>(しんか)</p><p>むらまつ</p>\
                         <img src=\"../../image/muramatu_02.png\" alt=\"むらまつ2\" class=\"zukan\">";
 
-    // カゲニキ：ルリリ
+    // カゲニキ：ルリリ15 29 14
     const kageZukan = "<div class=\"text-center back-white\" id=\"sugata\">" + 
                        kageSugata1 +
                       "</div>\
@@ -76,32 +76,32 @@ window.addEventListener("DOMContentLoaded", function() {
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">HP：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 7;\"></td> <!-- +4 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">こうげき：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 2;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td> <!-- +1 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">ぼうぎょ</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 4;\"></td> <!-- +1 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">とくこう：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 2;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 5;\"></td> <!-- +3 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">とくぼう：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 5;\"></td> <!-- +2 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">すばやさ：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 2;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 5;\"></td> <!-- +3 -->\
                                 </tr>\
                             </table>\
                             <p>まるくて 大きな おなかには 成長に 必要な 栄養が たっぷりと 詰まっているのだ。</p>\
                        </div>";
-    // リチさん：ニャース
+    // リチさん：ニャース8
     const richiZukan = "<div class=\"text-center back-white\" id=\"sugata\">" + 
                         richiSugata1 +
                        "</div>\
@@ -125,19 +125,19 @@ window.addEventListener("DOMContentLoaded", function() {
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">ぼうぎょ</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 4;\"></td> <!-- +1 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">とくこう：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 6;\"></td> <!-- +3 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">とくぼう：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 3;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 6;\"></td> <!-- +3 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">すばやさ：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 6;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 7;\"></td> <!-- +1 -->\
                                 </tr>\
                             </table>\
                             <p>ミミッキュが 大好き。 夜な夜な 出かけては 落ちている ミミッキュを 拾い 集めて 帰ってくる。</p>\
@@ -203,7 +203,7 @@ window.addEventListener("DOMContentLoaded", function() {
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">こうげき：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 5;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 7;\"></td> <!-- +2 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">ぼうぎょ</td>\
@@ -215,7 +215,7 @@ window.addEventListener("DOMContentLoaded", function() {
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">とくぼう：</td>\
-                                    <td class=\"zukan-t meter\" style=\"--hp: 4;\"></td>\
+                                    <td class=\"zukan-t meter\" style=\"--hp: 4;\"></td> <!-- +1 -->\
                                 </tr>\
                                 <tr>\
                                     <td class=\"zukan-t\">すばやさ：</td>\
