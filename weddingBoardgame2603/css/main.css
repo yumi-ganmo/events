@@ -29,8 +29,8 @@ main {
 }
 
 div.sub-title {
-    display: grid; /* 子要素を3:1の横並びに配置 */
-    grid-template-columns: 3fr 1fr;
+    display: grid; /* 子要素を4:1の横並びに配置 */
+    grid-template-columns: 4fr 1fr;
     text-align: center;
 }
 
