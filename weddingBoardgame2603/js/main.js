@@ -140,6 +140,8 @@ window.addEventListener("DOMContentLoaded", function() {
                                     <td class=\"zukan-t meter\" style=\"--hp: 7;\"></td> <!-- +1 -->\
                                 </tr>\
                             </table>\
+                            <div class=\"mimikkyu-sonyu\">\
+                            <img src=\"../../image/mimikkyu.png\" alt=\"ミミッキュ\" class=\"mimikkyu\">\
                             <p>ミミッキュが 大好き。 夜な夜な 出かけては 落ちている ミミッキュを 拾い 集めて 帰ってくる。</p>\
                         </div>";
     // かとう：ルージュラ
