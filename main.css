@@ -1,0 +1,287 @@
+@font-face {
+  font-family: 'Johto Mono';
+  src: url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff2') format('woff2'),
+       url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    /* 画像をgoogledriveから取得する場合 */
+    /* background-image: linear-gradient( rgb(20,10,0, 1), rgba(0,0,33, 0), rgb(20,10,0, 1)), url("https://lh3.googleusercontent.com/d/11RdU7Jlp52HFMuwHfOXp5KufZJPeP1S8"); */
+    /* 画像をディレクトリから取得する場合 */
+    background-image: url(./image/kusa.jpg);
+    background-size: 50px 50px; /* 画像の 横x高さ を指定 */
+    background-repeat: repeat; /* 画像を全方向に繰り返し(デフォルト) */
+    padding: 5px;
+    margin: 0;
+    align-items: center; /* 高さ方向の中央揃え */
+}
+main {
+    padding: 20px;
+}
+
+div.sub-title {
+    display: grid; /* 子要素を4:1の横並びに配置 */
+    grid-template-columns: 4fr 1fr;
+    text-align: center;
+}
+
+div.mimikkyu-sonyu {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+/* モバイル対応 */
+/* @media (max-width: 768px) {
+    header {
+        background-size: cover; /* 画像が画面内に収まるように調整 
+        background-position: center top; /* 画像が見切れないように調整 
+        height: auto; /* 高さをコンテンツに合わせて動的に調整 
+    }
+} */
+@media (max-width: 480px) {
+    .title {
+        flex-direction: column;   /* 縦並びに切り替え */
+    }
+}
+
+h1 {
+    margin: 10px; /* マージンをリセット */
+    padding: 10px; /* パディングをリセット */
+}
+h2 {
+    margin: 10px; /* マージンをリセット */
+    padding: 10px; /* パディングをリセット */
+}
+p {
+    margin: 5px 10px; /* マージンをリセット */
+    padding: 5px 10px; /* パディングをリセット */
+    line-height: normal; /* 行間を0にする */
+}
+.p-zukan {
+    margin: 5px 0px; /* マージンをリセット */
+    padding: 5px 0px; /* パディングをリセット */
+    line-height: normal; /* 行間を0にする */
+}
+hr {
+    border: none;
+}
+table {
+    width: 100%;
+    padding: 5px; /* パディングをリセット */
+}
+
+img.pokeSen {
+    width: 120px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+img.ookido,
+img.zukan {
+    width: 120px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto 10px auto;
+}
+img.icon {
+    width: 60px;
+    height: auto;
+}
+a.gree-kosiki {
+    text-decoration: underline;
+    text-decoration-color: #04633e !important;
+}
+ul.mokuji {
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width: 768px) { /* 画面幅が768px以下の場合 */
+    ul.mokuji {
+      display: block; /* display: flex を解除して要素を縦並びにする */
+    }
+}
+li.mokuji-li {
+    list-style:none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table td {
+    border: none; /* すべての境界線を削除 */
+    padding: 8px; /* セル内の余白を指定 */
+}
+table td.shosai-t {
+    border-bottom: 1px solid #ccc; /* ヘッダーの下に横線を追加 */
+}
+table tbody tr:last-child td.shosai-t {
+    border-bottom: none; /* 最終行の下には線を表示しない */
+}
+table tbody tr:last-child {
+    border-bottom: 1px solid #ccc; /* 最終行の下には線を表示 */
+}
+
+.back-white {
+    background-color: #f7f7f7;
+}
+.light-green {
+    color: #04633e;
+}
+.blossom {
+    color: #a14d47;
+}
+.yellow {
+    color: #b4902c;
+}
+.gray-pink {
+    color: #c9acad;
+}
+.gray-green {
+    color: #abc9aa;
+}
+.gray-blue {
+    color: #a7baca;
+}
+
+.button {
+    background-color: rgba(255, 250, 246, 0.7);
+    box-shadow: 2px  2px 4px gray; /* 影をつける */
+}
+.button:active {
+    background-color: rgba(255, 250, 246, 0.5);
+    box-shadow: none;
+}
+.double_line {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: double 5px #252525;
+    border-radius: 5px;
+}
+.line_icon {
+    display: inline-block;
+    border: 5px #252525;
+    border-radius: 45px;
+}
+.inline {
+  display: inline-block;
+  margin: 0;
+}
+.block {
+  display: block;
+  margin: 0;
+}
+
+/* outline */
+.accordion-item {
+    background-color: transparent;
+}
+.accordion-header {
+    padding: 20px 0 0 0;
+    margin: 0px;
+}
+/* 開いている（.show が付いた）ときだけ背景色をつける */
+.accordion .accordion-collapse.show {
+    background-color: rgba(255, 247, 240, 0.5);
+    padding: 0px;
+    margin: 0px;
+}
+/* 注意書き初期状態：非表示 */
+#zukanNote {
+    display: none;
+}
+/* collapse が開いている時だけ表示 */
+#collapseZukan.show ~ #zukanNote {
+    display: block;
+}
+
+/* エフェクト全上書き(詳細) */
+.shousai .accordion-button, 
+.shousai .accordion-button:focus,
+.shousai .accordion-button:active,
+.shousai .accordion-button:hover,
+.shousai .accordion-button:not(.collapsed) {
+  background-color: #75b8da; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+/* エフェクト全上書き(当日のスケジュール) */
+.schedule .accordion-button, 
+.schedule .accordion-button:focus,
+.schedule .accordion-button:active,
+.schedule .accordion-button:hover,
+.schedule .accordion-button:not(.collapsed) {
+  background-color: #75da7a; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+/* エフェクト全上書き(図鑑) */
+.zukan .accordion-button, 
+.zukan .accordion-button:focus,
+.zukan .accordion-button:active,
+.zukan .accordion-button:hover,
+.zukan .accordion-button:not(.collapsed) {
+  background-color: #da7575; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+/* エフェクト全上書き(出欠席回答) */
+.shukketu .accordion-button, 
+.shukketu .accordion-button:focus,
+/* .shukketu .accordion-button:active, */
+/* .shukketu .accordion-button:hover, */
+.shukketu .accordion-button:not(.collapsed) {
+  background-color: #dacb75; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+/* エフェクト全上書き(皆さんへのお願い) */
+.onegai .accordion-button, 
+.onegai .accordion-button:focus,
+.onegai .accordion-button:active,
+.onegai .accordion-button:hover,
+.onegai .accordion-button:not(.collapsed) {
+  background-color: #a693ca; /* 背景色を透明に */
+  color: inherit !important;                /* 文字色は継承 */
+  box-shadow: none !important;              /* 影を消す */
+  transition: none !important;              /* 色のフェード等の切り替えを無効化 */
+  border: double 5px #252525;
+}
+
+/* 図鑑のメーターを作成 */
+.meter {
+  display: flex;
+  gap: 3px;
+}
+/* ドットの見た目 */
+.dot {
+  width: 10px;
+  height: 24.5px;
+  border-radius: 999px;
+  background: #ddd;
+}
+.filled {
+  background: #ffc60b;
+}
+
+/* ポケモン */
+img.mimikkyu {
+    width: 50px;
+    height: auto;
+}
+img.genga {
+    width: 50px;
+    height: auto;
+}
