@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 分割ページの場合 -->
+    <link rel="next" href="./login.html" />
+    <link rel="next" href="./main.html" />
+
+    <!-- 外部ファイルの読み込み -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- アイコン -->
+    <link rel="shortcut icon" href="../../image/mail.ico" />
+
+    <title>トップページ - インカの黄金</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>インカの黄金<h1>
+    </header>
+
+    <main>
+        <button type="button" onclick="cleateNewGame()">新しくゲームを始める</button>
+
+        <input type="text" id="roomCode">
+        <button type="button" onclick="enteringRoom()">ルームコードを指定して入室</button>
+    </main>
+
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="../../js/main.js"></script>
+        <p>&copy; 20260901</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Johto Mono';
+  src: url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff2') format('woff2'),
+       url('../johto-mono-v2-607/WebFonts/JohtoMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
